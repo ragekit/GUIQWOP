@@ -3,24 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
-public class MainButton : MonoBehaviour {
+
+public class ExtendedButton : Button {
 
 	// Use this for initialization
-	public UnityEvent WhenOn;
-	public UnityEvent WhenOff;
-	Toggle t;
-	
+	public UnityEvent WhenPressed;
+	public UnityEvent NotPressed;
 	// Update is called once per frame
-	void Start(){
-		t = GetComponent<Toggle>();
-	}
-
 	void Update () {
-		if(t.isOn){
-			WhenOn.Invoke();
+		if(IsPressed()){
+			WhenPressed.Invoke();
 		}else {
-			WhenOff.Invoke();
+			NotPressed.Invoke();
 		}
 	}
+
 
 }
