@@ -13,6 +13,11 @@ public class FlushNode : UINode {
 		if(flushing){
 			foreach (var item in cis)
 			{
+				item.CheckButtons();
+			}
+			foreach (var item in cis)
+			{
+				
 				if(!item.validated){
 					return;
 				}
@@ -24,16 +29,14 @@ public class FlushNode : UINode {
 			}
 		}
 	}
-
-	
-
-
+	// could be change with setselectable
 	public void InitiateFlush(){
 		//base.SetSelectable(true);
 		//flushMain.interactable = false;
 		flushing = true;
 		flushMain.value = 0;
 		cis= GetComponentsInChildren<ClickIncrease>();
+		Debug.Log(cis.Length);
 		foreach (var item in cis)
 		{
 			item.Init();

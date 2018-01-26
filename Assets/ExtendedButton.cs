@@ -10,11 +10,14 @@ public class ExtendedButton : Button {
 	public UnityEvent WhenPressed;
 	public UnityEvent NotPressed;
 	// Update is called once per frame
+	public bool pressed;
 	void Update () {
 		if(IsPressed()){
 			WhenPressed.Invoke();
+			pressed = true;
 		}else {
 			NotPressed.Invoke();
+			pressed = false;
 		}
 	}
 

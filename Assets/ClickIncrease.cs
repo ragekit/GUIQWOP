@@ -6,18 +6,20 @@ public class ClickIncrease : MonoBehaviour {
 
 	// Use this for initialization
 
-	public Button button;
+	public ExtendedButton button;
 	public Scrollbar scrollbar;
 	public bool validated;
 	void Start () {
 	}
 
 	public void Init(){
+		Debug.Log(name);
 		button.interactable = true;
 		validated = false;
 	}
 	
 	public void buttonclicked(bool yes){
+		Debug.Log(name);
 		if(!validated){
 			if(yes){
 				scrollbar.size += 0.01f;
@@ -38,8 +40,8 @@ public class ClickIncrease : MonoBehaviour {
 	
 
 	// Update is called once per frame
-	void Update () {
-
+	public void CheckButtons () {
+		buttonclicked(button.pressed);
 		
 	}
 }

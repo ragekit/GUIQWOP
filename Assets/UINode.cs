@@ -11,7 +11,7 @@ public class UINode : MonoBehaviour {
 	public UnityEvent WhenSucces;
 	public bool initSelectable;
 	Selectable[] selectableContent;
-	void Start () {
+	protected virtual void Start () {
 		selectableContent = GetComponentsInChildren<Selectable>();
 		SetSelectable(initSelectable);
 	}
