@@ -1,3 +1,20 @@
+26/01/2018
+-------
+
+I tested today with Pippin and he did not go past the first add water module. It is interesting to note that changing its difficulty dramatically was just a matter of changing a boolean operator in the code. 
+
+I think this is a proof that there is a "design by doing" that is often overlooked by more standard academic practices. 
+
+Maybe I'm the one at fault here, but I often try to overdesign, and intelectualize how a design will behave. And once it is locked in my head, then I implement it. 
+
+Of course this fails because I can not anticipate, however hard I try, what will happen when someone play my games. Evenmore, why would I design it if answers were known beforehand ? And usually, I lack the time to do proper playtest and my game get frozen in that state, that has potential, but poor realizations.
+
+But once you've got a prototype going, it is easy to change a couple variable there and there, and this can drastically change the experience of your game. I'm slowly learning that going for a fast bad but playable version, even if your concept is still blurry in your head, and then working from there, is the best way to do research creation.
+
+In term of process, for The Method, I'm wondering if it would not be better to use the built in github-pages. It uses markdown, so it would be the same workflow, but in a more " user friendly " readable way.
+
+Also It might be interesting to tag certain commit, when a playable version is done, so they can be fetched easily and a collection of "progression prototypes" can be played. Maybe as part of the github-pages website ?
+
 25/01/2018
 ---------
 
