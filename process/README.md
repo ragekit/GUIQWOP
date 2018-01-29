@@ -9,7 +9,7 @@ I think having only the first module failable is interesting, but having other m
 
 I also implemented an instruction and feedback system (that only works for the temperature module for now). You are asked to brew a specific type of tea and you get feedback from the person who ordered it. This is a less frustrating failure, that can also be humorous ("what, this tea is cold ?! And it's not even tea it's woodchips !"), and might push players to play with the UI to figure out what they did wrong, and understand what module does what through the feedbacks.
 
-Maybe instead of being sequentials, module should interact between each other. Like, the temperature module could make the add water module change a bit.Or a random module that does set some data, but change it on several module at once, just to confuse the player. (that could be seen as a metaphor for "Super users" functions that set multiple things at once but confuse the novice, kind of like a Vim shortcut for a teapot).
+Maybe instead of being sequentials, module should interact between each other. Like, the temperature module could make the add water module change a bit. Or a random module that does not set some data, but change it on several module at once, just to confuse the player. (that could be seen as a metaphor for "Super users" functions that set multiple things at once but confuse the novice, kind of like a Vim shortcut for a teapot).
 
 Also exploring how to make the different stages of the prototype playable so commits, but also prototype could be quotable by THE METHOD.
 
