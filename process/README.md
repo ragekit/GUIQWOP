@@ -1,3 +1,23 @@
+TODO week 2
+-----
+
+- new temperature node
+- clean water node
+- select tea node
+- brew time node
+- super user nodes
+- balance modules (heavy testing).
+- improve the instructions/feedback system
+
+
+
+Test notes
+------
+- [X] The "feedback" gauges looks too much like input, correct that (with colors maybe). 
+- The add water module is still a bit too hard to use. Maybe add just a litle bit of feedback.
+- input/output sidget like the slowly decreasing power bar should show more that they can still be usable.
+
+
 27/01/2018
 -------
 

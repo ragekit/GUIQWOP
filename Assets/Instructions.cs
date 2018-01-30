@@ -24,7 +24,7 @@ public class Instructions : MonoBehaviour {
 	}
 	
 	public void CheckIfWon(){
-		int temp = TemperatureNode.instance.getTemperature();
+		float temp = TemperatureNode.instance.getTemperature();
 		Debug.Log(temp);
 		if(temp < currentInstruction.maxTemp && temp > currentInstruction.minTemp){
 			GetComponent<Text>().text = "Thanks, this is some good "+ currentInstruction.text + " tea";

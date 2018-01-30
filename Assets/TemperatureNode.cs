@@ -4,58 +4,54 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Linq;
 using System;
-
+using UnityEngine.Events;
 public class TemperatureNode : UINode {
 
 	// Use this for initialization
 	// Update is called once per frame
-	public Slider topSlider;
-	public Slider bottomSlider;
 	public RectTransform matrix;
-	public Button validateButton;
 	Toggle[] toggles;
-    private Toggle[] unoderedToggles;
 
 	[HideInInspector]
 	public static TemperatureNode instance;
     private BitArray bits;
 
+	public Scrollbar feedback;
+
     void Update () {
-		float slidersValue = (topSlider.value + bottomSlider.value) / (topSlider.maxValue + bottomSlider.maxValue);
 
-		int numberOfToggleOn = Mathf.RoundToInt(slidersValue * toggles.Length);
-		
-		
+	}
 
-		for (int i = 0; i < unoderedToggles.Length; i++)
-		{
-			unoderedToggles[i].isOn = i<numberOfToggleOn;
-			
-		}
-
+	public float getTemperature(){
 		for (int j = 0; j < toggles.Length; j++)
 		{
 			bits[j] = toggles[j].isOn;
 		}
-	
-	}
-
-	public int getTemperature(){
 		return getTempFromBitArray(bits);
 	}
 
-	private int getTempFromBitArray(BitArray bitArray)
+	public void changeTemperature(){
+		for (int j = 0; j < toggles.Length; j++)
+		{
+			bits[j] = toggles[j].isOn;
+		}
+		Debug.Log(getTempFromBitArray(bits));
+
+		feedback.size = getTempFromBitArray(bits)/100.0f;
+	}
+
+	private float getTempFromBitArray(BitArray bitArray)
 	{
 		long value = 0;
 
-		
+		Debug.Log(bitArray.Count);
 		for (int i = 0; i < bitArray.Count; i++)
 		{
 			if (bitArray[i])
 				value += (long)Mathf.Pow(2, bitArray.Count-i -1);
 		}
-		double intdiff = (double)((long)(int.MaxValue) - (long)(int.MinValue));
-		return  (int)((value/intdiff)*100);
+		double maxvalue = System.Math.Pow(2,8) -1;
+		return  (float)((value/maxvalue)*100);
 	}
 
 	public void success(){
@@ -66,13 +62,13 @@ public class TemperatureNode : UINode {
 	override protected void Start(){
 		base.Start();
 		instance = this;
-		System.Random rnd = new System.Random();
 		toggles = matrix.GetComponentsInChildren<Toggle>();
 		bits = new BitArray(toggles.Length);
-		unoderedToggles = toggles.OrderBy(x => rnd.Next()).ToArray();
+
+		foreach (var item in toggles)
+		{
+			item.onValueChanged.AddListener(delegate{changeTemperature();});
+		}
 	}
 	
-	public override void SetSelectable(bool yes){
-		topSlider.interactable = bottomSlider.interactable = validateButton.interactable =  yes;
-	}
 }

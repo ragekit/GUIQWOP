@@ -7,7 +7,7 @@ public class StepsButtons : UINode {
 
 	// Use this for initialization
 
-	TwoStepToggle[] steps;
+	TwoStepButton[] steps;
 	// Update is called once per frame
 	void Update () {
 		
@@ -27,7 +27,7 @@ public class StepsButtons : UINode {
 
     override protected void Start(){
 		base.Start();
-		steps = GetComponentsInChildren<TwoStepToggle>();
+		steps = GetComponentsInChildren<TwoStepButton>();
 
 	}
 
