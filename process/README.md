@@ -1,7 +1,15 @@
+30/01/2018
+------
+
+I made roxanne play the prototype today which helped me detect some bottlenecks. The water module is still too complicated to use but rather than balance it too soon, I wanted to add all the UI widget needed to have a feature complete prototype. Everything is in but noew, but non functional yet. Next step, make everything functional and resume testing and balancing.
+
+I also changed the temperature node, which was too complicated to use. Sometimes it could be impossible to set the correct temperature which would be unfair instead of unusable. Now the temperature is selected by clicked 8 buttons that represents the 8 bits of the temperature, with max at 100.
+
+
 TODO week 2
 -----
 
-- new temperature node
+- [X] new temperature node
 - clean water node
 - select tea node
 - brew time node
