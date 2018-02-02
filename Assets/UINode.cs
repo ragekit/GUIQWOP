@@ -11,6 +11,8 @@ public class UINode : MonoBehaviour {
 	public UnityEvent WhenSucces;
 	public bool initSelectable;
 	Selectable[] selectableContent;
+
+	protected bool isSelectable;
 	protected virtual void Start () {
 		selectableContent = GetComponentsInChildren<Selectable>();
 		SetSelectable(initSelectable);
@@ -21,6 +23,8 @@ public class UINode : MonoBehaviour {
 		{
 			item.interactable = yes;
 		}
+
+		isSelectable = yes;
 	}
 
 	// Update is called once per frame
