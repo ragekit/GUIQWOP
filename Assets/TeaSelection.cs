@@ -18,10 +18,12 @@ public class TeaSelection : UINode
     public Slider slider3;
     public Slider slider4;
 
-
+	public static TeaSelection instance;
+	public string tea;
     override protected void Start()
     {
         base.Start();
+		instance = this;
         teas = teaSelectionParent.GetComponentsInChildren<Tea>();
     }
 
@@ -67,6 +69,7 @@ public class TeaSelection : UINode
             if (i == j)
             {
                 teas[j].Select(true);
+				tea = teas[j].teaName;
             }
             else
             {

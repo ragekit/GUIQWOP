@@ -20,6 +20,7 @@ public class CleanWaterNode : UINode
 	public Color outputColor;
 
 	public float cleanRatio;
+	public static CleanWaterNode instance;
     void Update()
     {
 		
@@ -100,7 +101,7 @@ public class CleanWaterNode : UINode
 		notTicking.AddRange(ticks);
 		notLocked = new List<Ticker>();
 		notLocked.AddRange(ticks);
-
+		instance = this;
 		outputs = outputParent.GetComponentsInChildren<Image>();
 
 		base.Start();

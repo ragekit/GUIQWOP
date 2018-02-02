@@ -13,6 +13,7 @@ public class BrewTimeNode : UINode {
 	int index;
 
 	public float time;
+	public static BrewTimeNode instance;
 	// Update is called once per frame
 	void Update () {
 		
@@ -42,6 +43,7 @@ public class BrewTimeNode : UINode {
 
 	override protected void Start(){
 		base.Start();
+		instance = this;
 		children = GetComponentsInChildren<Led>();
 		System.Random rnd = new System.Random();
 		randomChildren = children.OrderBy(x => rnd.Next()).ToArray();    
