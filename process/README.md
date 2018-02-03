@@ -1,3 +1,12 @@
+02/02/2018
+------------
+
+Today I rushed to finish all the modules. Everything is here and I also added instructions (a very rought first version) for each new modules. I'm not sure I'm going to keep the filtered water module because I feel it does not make sense but this will be decided during text, because It could also add a bit of difficulty and a certain strangeness feeling.
+I also have another idea for the select tea module. At first I wanted the slider to select the tea to move eraticly and the other sliders to have an effect on it (make it slower or less erratic), and this is what I have right now. But I think instead of having the sliders directly changing a value, the selection could be made less erratic by checking if the slider was moved recently. So the value of the slider is not used directly to select the tea, but instead, jingling the slider repeatedly is necessary to make the selection (which is counter intuitive and so : good).
+
+
+
+
 30/01/2018
 ------
 
@@ -10,9 +19,9 @@ TODO week 2
 -----
 
 - [X] new temperature node
-- clean water node
-- select tea node
-- brew time node
+- [X] clean water node
+- [X] select tea node
+- [X] brew time node
 - super user nodes
 - balance modules (heavy testing).
 - improve the instructions/feedback system
@@ -23,7 +32,7 @@ Test notes
 ------
 - [X] The "feedback" gauges looks too much like input, correct that (with colors maybe). 
 - The add water module is still a bit too hard to use. Maybe add just a litle bit of feedback.
-- input/output sidget like the slowly decreasing power bar should show more that they can still be usable.
+- [X] input/output sidget like the slowly decreasing power bar should show more that they can still be usable.
 
 
 27/01/2018
