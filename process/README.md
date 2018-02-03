@@ -4,7 +4,11 @@
 Today I rushed to finish all the modules. Everything is here and I also added instructions (a very rought first version) for each new modules. I'm not sure I'm going to keep the filtered water module because I feel it does not make sense but this will be decided during text, because It could also add a bit of difficulty and a certain strangeness feeling.
 I also have another idea for the select tea module. At first I wanted the slider to select the tea to move eraticly and the other sliders to have an effect on it (make it slower or less erratic), and this is what I have right now. But I think instead of having the sliders directly changing a value, the selection could be made less erratic by checking if the slider was moved recently. So the value of the slider is not used directly to select the tea, but instead, jingling the slider repeatedly is necessary to make the selection (which is counter intuitive and so : good).
 
+Right now verything is heavily unbalanced and either too easy or too hard, and could use some work. But the feature scope is made and the game roughly there. Now, it is a matter of testing, balancing, tweaking module, and shaping what I have.
 
+I think half way through the project is a good time to be in a state where everywhere is there, playable, but very rought on the edge, so the other half of the project is devoted to refining it.
+
+Test build : https://ragekit.github.io/GUIQWOP-builds/Week2/
 
 
 30/01/2018
